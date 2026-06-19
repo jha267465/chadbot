@@ -1,16 +1,10 @@
 const { Bot, session } = require('grammy');
 const Groq = require('groq-sdk');
-const { GoogleGenerativeAI } = require('@google/generative-ai');
-const { Mistral } = require('@mistralai/mistralai');
-const OpenAI = require('openai');
 
 // ===== CONFIG =====
 const BOT_TOKEN = process.env.BOT_TOKEN;
 const OWNER_ID = 8298822292;
 const GROQ_KEY = process.env.GROQ_API_KEY;
-const GEMINI_KEY = process.env.GEMINI_API_KEY;
-const MISTRAL_KEY = process.env.MISTRAL_API_KEY;
-const OPENROUTER_KEY = process.env.OPENROUTER_API_KEY;
 
 // ===== AI CLIENTS =====
 const groq = GROQ_KEY ? new Groq({ apiKey: GROQ_KEY }) : null;
